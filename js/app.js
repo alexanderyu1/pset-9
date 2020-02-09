@@ -55,6 +55,7 @@ function render() {
   else if (win === "O") {
     o_wins_count = o_wins_count + 1
   }
+
   x_wins.innerHTML = x_wins_count
   o_wins.innerHTML = o_wins_count
 
@@ -92,4 +93,13 @@ function getWinner() {
   });
 
   return winner ? winner : board.includes("") ? null : "T";
+}
+
+function switch_turn() {
+  if (turn_count == 0) {
+    turn_count = 1
+  }
+  else if (turn_count == 1) {
+    turn_count = 0
+  }
 }
