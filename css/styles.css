@@ -108,9 +108,9 @@ h2 {
 }
 
 #who-goes-first {
-  background-color: white;
+  background-color: black;
   border: 1px solid black;
-  color: black;
+  color: white;
   font-size: 21px;
   line-height: 55px;
   margin: 1%;
