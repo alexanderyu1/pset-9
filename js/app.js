@@ -14,6 +14,8 @@ let board;
 let turn;
 let win;
 let turn_count = 0
+let x_wins_count = 0
+let o_wins_count = 0
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");   // grab the subheader
@@ -46,6 +48,15 @@ function render() {
   board.forEach(function(mark, index) {
     squares[index].textContent = mark;
   });
+
+  if (win === "X") {
+    x_wins_count = x_wins_count + 1
+  }
+  else if (win === "O") {
+    o_wins_count = o_wins_count + 1
+  }
+  x_wins.innerHTML = x_wins_count
+  o_wins.innerHTML = o_wins_count
 
   message.textContent =
     win === "T" ? "It's a tie!" : win ? `${win} wins!` : `Turn: ${turn}`;
