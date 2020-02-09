@@ -32,7 +32,7 @@ function init() {
     "", "", ""
   ];
 
-  if (turn_count == 0) {
+  if (turn_count == 0) 
     turn = "X";
   }
   else if (turn_count == 1) {
