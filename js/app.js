@@ -13,6 +13,7 @@ const winningConditions = [
 let board;
 let turn;
 let win;
+let turn_count = 0
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");   // grab the subheader
@@ -20,6 +21,7 @@ const message = document.querySelector("h2");   // grab the subheader
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
+document.getElementById("who-goes-first").onclick = switch_turn;
 ///////////////////// FUNCTIONS /////////////////////////////////////
 function init() {
   board = [
@@ -28,10 +30,16 @@ function init() {
     "", "", ""
   ];
 
-  turn = "X";
+  if (turn_count == 0) {
+    turn = "X";
+  }
+  else if (turn_count == 1) {
+    turn = "O"
+  }
+
   win = null;
 
-  render();   // we'll write this later
+  render();
 }
 
 function render() {

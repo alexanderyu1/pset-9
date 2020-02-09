@@ -111,8 +111,8 @@ h2 {
   border: 1px solid rgba(0, 0, 0, 0.75);
   font-size: 20px;
   font-weight: bold;
-  height: 50px;
-  line-height: 50px;
+  height: 55px;
+  line-height: 55px;
   user-select: none;
   width: 300px;
   background-color: white;
@@ -121,4 +121,26 @@ h2 {
 #who-goes-first:hover {
   background-color: black;
   cursor: pointer;
+  color: white;
+}
+
+#x_wins {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  user-select: none;
+  width: 150px;
+  background-color: black;
+  color: white;
+}
+#o_wins {
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  user-select: none;
+  width: 150px;
+  background-color: black;
+  color: white;
 }
