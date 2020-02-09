@@ -116,6 +116,7 @@ h2 {
   user-select: none;
   width: 300px;
   background-color: white;
+  padding: 10 10 10 10;
 }
 
 #who-goes-first:hover {
