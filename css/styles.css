@@ -108,12 +108,17 @@ h2 {
 }
 
 #who-goes-first {
-  background-color: black;
-  border: 1px solid black;
-  color: white;
-  font-size: 21px;
-  line-height: 55px;
-  margin: 1%;
-  text-align: center;
-  width: 456px;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  user-select: none;
+  width: 300px;
+  background-color: white;
+}
+
+#who-goes-first:hover {
+  background-color: lightgray;
+  cursor: pointer;
 }
