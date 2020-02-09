@@ -13,9 +13,9 @@ const winningConditions = [
 let board;
 let turn;
 let win;
-let turn_count = 0
 let x_wins_count = 0
 let o_wins_count = 0
+let turn_count = 0
 ///////////////////// CACHED ELEMENT REFERENCES /////////////////////
 const squares = Array.from(document.querySelectorAll("#board div"));
 const message = document.querySelector("h2");   // grab the subheader
@@ -36,7 +36,7 @@ function init() {
     turn = "X";
   }
   else if (turn_count == 1) {
-    turn = "O"
+    turn = "O";
   }
 
   win = null;
@@ -96,10 +96,12 @@ function getWinner() {
 }
 
 function switch_turn() {
+
   if (turn_count == 0) {
     turn_count = 1
   }
   else if (turn_count == 1) {
     turn_count = 0
   }
+
 }
