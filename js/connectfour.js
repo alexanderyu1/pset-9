@@ -4,5 +4,5 @@
 
 //EVENT LISTENERS
 window.onload = init;
-document.getElementById("board")
+takeTurn = document.getElementById("board").onclick
 //FUNCTIONS
