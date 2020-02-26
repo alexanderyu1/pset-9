@@ -8,5 +8,5 @@ takeTurn = document.getElementById("board").onclick
 init = document.getElementById("reset-button").onclick
 //FUNCTIONS
 function init() {
-  
+  f
 }
