@@ -551,10 +551,6 @@ function resetScoreboard() {
     document.getElementById("oScore").innerHTML = oWins;
 }
 
-function playYuh() {
-  document.getElementById("myAudio").play();
-}
-
 function getNextMove(e) {
 
   let index = squares.findIndex(function(square) {
@@ -940,5 +936,4 @@ if (!thirdLeftWin && board[81] != undefined && board[82] != undefined && board[8
   board[80] = winner;
 
 }
-
 }
