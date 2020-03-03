@@ -1,4 +1,4 @@
-//CONSTANTS
+///////////////////// CONSTANTS /////////////////////////////////////
 const winningConditions = [
 //horizontal
   [35, 36, 37, 38],
@@ -74,7 +74,9 @@ const winningConditions = [
   [25, 17, 9, 1],
   [24, 16, 8, 0]
 ];
-//VARIABLES
+
+
+///////////////////// APP STATE (VARIABLES) /////////////////////////
 let board;
 let turn;
 let win;
@@ -83,14 +85,17 @@ let yellowWins = 0;
 let ties = 0;
 let first = "Red";
 let winner;
-//EVENT LISTENERS
+///////////////////// CACHED ELEMENT REFERENCES /////////////////////
+const dots = Array.from(document.querySelectorAll("#board div"));
+const message = document.querySelector("h2");
+///////////////////// EVENT LISTENERS ///////////////////////////////
 window.onload = init;
 document.getElementById("board").onclick = takeTurn;
 document.getElementById("reset-button").onclick = init;
 document.getElementById("redFirst").onclick = redFirst;
 document.getElementById("yellowFirst").onclick = yellowFirst;
-document.getElementById("reset-scoreboard").onclick = resetScoreboard;
-//FUNCTIONS
+///////////////////// FUNCTIONS /////////////////////////////////////
+
 function init() {
   board = [
     "", "", "", "", "", "", "",
@@ -211,18 +216,16 @@ function getWinner() {
       board[condition[0]] === board[condition[1]] &&
       board[condition[1]] === board[condition[2]] &&
       board[condition[2]] === board[condition[3]]
-    ) {
+      ) {
       winner = board[condition[0]];
       if (winner === "Red") {
-        redWins++;
         document.getElementById("redScore").innerHTML = redWins;
-        playOKOK();
+        alert ("Red wins!");
 
       }
       else if (winner === "Yellow") {
-        yellowWins++;
         document.getElementById("yellowScore").innerHTML = yellowWins;
-        playOKOK();
+        alert ("Yellow wins!");
 
       }
 
@@ -245,16 +248,6 @@ function playAgain() {
   init()
 }
 
-function resetScoreboard() {
-  redWins = 0;
-  yellowWins = 0;
-  ties = 0;
-
-  document.getElementById("redScore").innerHTML = redWins;
-  document.getElementById("tScore").innerHTML = ties;
-  document.getElementById("yellowScore").innerHTML = yellowWins;
-}
-
 function redFirst(){
   init();
 
@@ -271,15 +264,4 @@ function yellowFirst(){
   document.getElementById("turn").innerHTML = "Turn: Yellow";
   turn = "Yellow";
   first = "Yellow"
-
 }
-
-function resetScoreboard() {
-    redWins = 0;
-    yellowWins = 0;
-    ties = 0;
-
-    document.getElementById("redScore").innerHTML = redWins;
-    document.getElementById("tScore").innerHTML = ties;
-    document.getElementById("yellowScore").innerHTML = yellowWins;
-  }

@@ -1,6 +1,4 @@
-
 body {
-  background-image: url("../images/cloudy.gif");
   background-size: cover;
   text-align: center;
   font-family: "Roboto", monospace;
@@ -41,33 +39,59 @@ table, td, th {
   border: 1px solid white;
   color: white;
 }
+#header {
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 51px;
+  background: #000000;
+  font-family: monospace;
+}
 
-ul {
-  list-style-type: none;
-  margin: 0;
+nav ul {
+  list-style: none;
+  text-align: left;
   padding: 0;
-  overflow: hidden;
-  background-color: #333;
+  margin: 0;
+  overflow: auto;
+  font-family: monospace;
 }
 
-li {
-  float: left;
+nav li {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 20px;
+  float: center;
+  font-size: 21px;
+  font-family: monospace;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+nav a {
   text-decoration: none;
+  color: #ffffff;
+  font-family: monospace;
 }
 
-li a:hover:not(.active) {
-  background-color: #111;
+nav a:hover {
+  font-weight: bold;
+  font-family: monospace;
 }
 
-.active {
-  background-color: #4CAF50;
+a {
+  color: black;
+  text-decoration: none;
+  border: 2px solid black;
+}
+
+a:hover {
+  border: 0px;
+}
+
+#logo {
+  float: center;
+  background: #ffffff;
+  color: #303030;
+  font-weight: bold;
+  font-family: monospace;
 }
 
 .dot {
@@ -149,7 +173,7 @@ align-items: center;
 }
 
 #board {
-  background-color: #348ceb;
+  background-color: black;
   display: inline-block;
   vertical-align: middle;
   line-height: 123px;
@@ -187,21 +211,4 @@ align-items: center;
 #turn {
   font-size: 70px;
   margin: 5px;
-}
-
-#reset-scoreboard {
-  background-color: white;
-  border: 1px solid black;
-  color: black;
-  font-size: 21px;
-  line-height: 55px;
-  margin: 0%;
-  text-align: center;
-  width: 456px;
-}
-
-#reset-scoreboard:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
 }
