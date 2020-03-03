@@ -148,7 +148,7 @@ a:hover {
 }
 
 .nextSquare {
-  background-color: green;
+  background-color: lightgrey;
 
 }
 
@@ -194,16 +194,14 @@ a:hover {
 .scoreboard {
   border-collapse: collapse;
   margin: 2%;
-  border-color: white;
+  border-color: black;
 }
 
 td {
-  border-color: white;
+  border-color: black;
+  border-width: medium;
 }
 
-p {
-  background-color: black;
-}
 table, td, th {
-  border: 1px solid white;
+  border: 1px solid black;
 }
