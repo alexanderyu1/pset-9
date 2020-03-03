@@ -30,34 +30,140 @@
 
 <div class="container column">
 
-  <h2>Turn: X</h2>
-
-  <div class="container wrap" id="board">
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
+  <h3>Who's going first?</h3>
+  <div class="container">
+    <div class="first" id="xFirst">X</div>
+    <div class="first" id="oFirst">O</div>
   </div>
 
-  <div id="who-goes-first">Who goes first? (Press Play Again to apply)</div>
+<table class="scoreboard">
+<tr>
+<td># of X Wins:</td>
+<td># of Ties:</td>
+<td># Of O Wins:</td>
+</tr>
+<tr>
+<td id="xScore">0</td>
+<td id="tScore">0</td>
+<td id="oScore">0</td>
+</tr>
+</table>
+<div id="reset-scoreboard">Reset Scoreboard</div>
+<h2 id="turn">Turn: X</h2>
+  <div class="container wrap" id="board">
+
+    <div class="square container miniwrap" id="first-left">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+    <div class="square container miniwrap" id="first-middle">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+    <div class="square container miniwrap" id="first-right">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+    <div class="square container miniwrap" id="second-left">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+    <div class="square container miniwrap" id="second-middle">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+    <div class="square container miniwrap" id="second-right">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+    <div class="square container miniwrap" id="third-left">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+    <div class="square container miniwrap" id="third-middle">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+    <div class="square container miniwrap" id="third-right">
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+      <div class="mini-square"></div>
+    </div>
+
+  </div>
+
   <div id="reset-button">Play Again!</div>
 </div>
-
-<table>
-  <tr>
-    <th class="wins">X's number of wins</th>
-    <th class="wins">O's number of wins</th>
-  </tr>
-  <tr>
-    <td id="x_wins">0</td>
-    <td id="o_wins">0</td>
-  </tr>
-</table>
-
-  </body>
+<p>* To remove music right click on the tab and select "mute site" *</p>
+</body>
 </html>
