@@ -308,30 +308,28 @@ else {
 }
 }
 
-
-
 else if (nextMove == "secondleft") {
   if (board[30] != "X" && board[30] != "O" && board[30] != "T") {
 
+    if (index >= 31 && index <= 39 ) {
 
-  if (index >= 31 && index <= 39 ) {
-  if (squares[index].textContent === "") {
-    board[index] = turn;
-    turn = turn === "X" ? "O" : "X";
-    win = getWinner();
-    secondLeftWinner = getSecondLeftWinner();
+      if (squares[index].textContent === "") {
+        board[index] = turn;
+        turn = turn === "X" ? "O" : "X";
+        win = getWinner();
+        secondLeftWinner = getSecondLeftWinner();
 
-    document.getElementById("second-left").classList.remove("nextSquare");
-    nextMove = getNextMove(e);
-    if (win === "T") {
-      ties++;
-      document.getElementById("tScore").innerHTML = ties;
-    }
+        document.getElementById("second-left").classList.remove("nextSquare");
+        nextMove = getNextMove(e);
+
+          if (win === "T") {
+            ties++;
+            document.getElementById("tScore").innerHTML = ties;
+          }
 
     render();
   }
 }
-
 }
 else {
   nextMove = "any"
@@ -367,24 +365,22 @@ else {
 }
 }
 
-
 else if (nextMove == "secondright") {
   if (board[50] != "X" && board[50] != "O" && board[50] != "T") {
 
+    if (index >= 51 && index <= 59) {
+        if (squares[index].textContent === "") {
+        board[index] = turn;
+        turn = turn === "X" ? "O" : "X";
+        win = getWinner();
+        secondRightWinner = getSecondRightWinner();
 
-  if (index >= 51 && index <= 59) {
-  if (squares[index].textContent === "") {
-    board[index] = turn;
-    turn = turn === "X" ? "O" : "X";
-    win = getWinner();
-    secondRightWinner = getSecondRightWinner();
-
-    document.getElementById("second-right").classList.remove("nextSquare");
-    nextMove = getNextMove(e);
-    if (win === "T") {
-      ties++;
-      document.getElementById("tScore").innerHTML = ties;
-    }
+        document.getElementById("second-right").classList.remove("nextSquare");
+        nextMove = getNextMove(e);
+          if (win === "T") {
+            ties++;
+            document.getElementById("tScore").innerHTML = ties;
+      }
 
     render();
   }
@@ -395,24 +391,22 @@ else {
 }
 }
 
-
 else if (nextMove == "thirdleft") {
   if (board[60] != "X" && board[60] != "O" && board[60] != "T") {
 
+    if (index >= 61 && index <= 69) {
+        if (squares[index].textContent === "") {
+          board[index] = turn;
+          turn = turn === "X" ? "O" : "X";
+          win = getWinner();
+          thirdLeftWinner = getThirdLeftWinner();
 
-  if (index >= 61 && index <= 69) {
-  if (squares[index].textContent === "") {
-    board[index] = turn;
-    turn = turn === "X" ? "O" : "X";
-    win = getWinner();
-    thirdLeftWinner = getThirdLeftWinner();
-
-    document.getElementById("third-left").classList.remove("nextSquare");
-    nextMove = getNextMove(e);
-    if (win === "T") {
-      ties++;
-      document.getElementById("tScore").innerHTML = ties;
-    }
+          document.getElementById("third-left").classList.remove("nextSquare");
+          nextMove = getNextMove(e);
+            if (win === "T") {
+              ties++;
+              document.getElementById("tScore").innerHTML = ties;
+            }
 
     render();
   }
