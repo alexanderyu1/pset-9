@@ -74,8 +74,6 @@ const winningConditions = [
   [25, 17, 9, 1],
   [24, 16, 8, 0]
 ];
-
-
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 let board;
 let turn;
@@ -95,7 +93,6 @@ document.getElementById("reset-button").onclick = init;
 document.getElementById("redFirst").onclick = redFirst;
 document.getElementById("yellowFirst").onclick = yellowFirst;
 ///////////////////// FUNCTIONS /////////////////////////////////////
-
 function init() {
   board = [
     "", "", "", "", "", "", "",
@@ -171,29 +168,29 @@ if (board[index] === "") {
 
   }
   else if (board[index] !== "") {
+
     if (board[row1] === "") {
+
       while (board[row1 + 7] === "") {
+
         let i = row1 + 7;
         document.getElementById("dot" + i + "").classList.add(turn);
         board[i] = turn;
         document.getElementById("dot" + row1 + "").classList.remove(turn);
         board[row1] = "";
         row1 = i;
-
       }
+
       if (board[row1] === "") {
         document.getElementById("dot" + row1 + "").classList.add(turn);
         board[row1] = turn;
-
       }
-
     }
+
     else if (board[row1] !== "") {
       return false;
     }
    }
-
-
 
   turn = turn === "Red" ? "Yellow" : "Red";
   win = getWinner();
@@ -205,7 +202,6 @@ if (board[index] === "") {
   render();
 }
 }
-
 
 function getWinner() {
   let winner = null;
